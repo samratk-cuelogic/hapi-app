@@ -1,0 +1,99 @@
+<!--  
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--  meta tags -->
+    <meta charset="utf-8">  
+    <!-- Bootstrap CSS -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+      <%  include partials/template/scripts.ejs %>
+    <title>Employee Node</title>
+  </head>
+  <body>
+  <%  include partials/template/header.ejs %>
+  <div class="container"> 
+    <div class="row"> 
+    <div class="col-md-2"></div> 
+    <div class="col-md-5"> 
+    <h3>Employee</h3>   
+               <form action="/employee" method="POST"> 
+				   <div class="form-group">
+				    <label for="firstName">First name</label> 
+				     <input type="text" class="form-control" name="firstName" placeholder="first name"  required> 
+				     <%=errData.firstName;%>
+				  </div>
+				  <div class="form-group">
+				    <label for="lastName">Last name</label> 
+				     <input type="text"  class="form-control" name="lastName" placeholder="last name" required > 
+				     <%=errData.lastName;%>
+				  </div>
+				  <div class="form-group">
+				    <label for="address">Address</label> 
+				     <input type="text"  class="form-control" name="address" placeholder="address" required >
+				      <%=errData.address;%>
+				  </div>
+				   <div class="form-group">
+				    <label for="country">Country</label> 
+				      <input type="text"  class="form-control" name="country" placeholder="country" required>
+				      <%=errData.country;%>
+				  </div>
+				   <div class="form-group">
+				    <label for="phone">Phone No</label> 
+				      <input type="text"  class="form-control" name="phone" placeholder="phone"  required>
+				      <%=errData.phone;%>
+				  </div>
+				   <div class="form-group">
+				    <label for="department">Department</label> 
+				     <input type="text"  class="form-control" name="department" placeholder="department" required >
+				     <%=errData.department;%>
+				  </div> 
+				  <div class="form-group"> 
+				 		 <button type="submit">Submit</button>
+				  </div>
+				</form>
+		 </div>
+ </div>
+	  <div class="row"> 
+			 <!--  <%= empData; %>
+			  <% if ( empData) { %>
+					 <%  empData=empData;// JSON.parse(empData.empData); %>
+					   <% if(empData) { %>
+							  <p>Employee List</p>
+							  <table class="table table-striped">
+							  	<tr>
+							  		<th>Name</th>
+							  		<th>address</th>
+							  		<th>country</th>
+							  		<th>phone</th>
+							  		<th>department</th>
+							      <th>Actions</th>
+							  	</tr>
+							  	<% for(i in empData.empData) { %>
+								  	<tr>
+								  		<td><%=empData[i].firstName+' '+empData[i].lastName  %></td>
+								  		<td><%=empData[i].address%></td>
+								  		<td><%=empData[i].country%></td>
+								  		<td><%=empData[i].phone%></td>
+								  		<td><%=empData[i].department%></td> 
+							        <td>
+							          <a href="/edit/<%=empData[i]._id%>">edit</a>
+							          <a href="/delete/<%=empData[i]._id%>" onclick="javascript:return confirm('delete?');">delete</a>
+							        </td>
+								</tr>
+							  	<% } %>
+							  </table>
+							<% } else { %>
+							  <p>  No record present </p>
+							<% }%>  
+					<% } %>   -->
+			</div>	
+		<%  include partials/template/footer.ejs %>
+	</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html> -->
